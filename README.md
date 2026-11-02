@@ -30,7 +30,7 @@ What share of net revenue comes from the UK? Because the UK is the largest marke
 - Checked the model: the same measure gives the same figure before and after relationships, so the model adds no duplicated or lost rows.
 - Date range: 1 Dec 2010 to 9 Dec 2011.
 
-  DAX measures are in [dax_measures.txt](https://github.com/Nasir-ay/online-retail-uci/blob/main/dax_measures.txt)
+  DAX measures are in [dax_measures.txt](https://github.com/nasir-ay/online-retail-uci/blob/main/dax_measures.txt)
 
 ## Key findings
 
