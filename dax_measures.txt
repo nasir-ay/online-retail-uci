@@ -1,0 +1,29 @@
+Net product revenue:
+Net Product Revenue = [Gross Product Sales] + [Cancelled Product Value]
+
+  Gross Product Sales = CALCULATE(SUMX(sales, sales[Quantity] * sales[UnitPrice]), sales[RowType] = "Product")
+
+  Cancelled Product Value = CALCULATE(SUMX(sales, sales[Quantity] * sales[UnitPrice]), 
+                          sales[RowType] = "Cancellation", 
+                          sales[StockCode] <> "post", 
+                          sales[StockCode] <> "dot", 
+                          sales[StockCode] <> "c2", 
+                          sales[StockCode] <> "d", 
+                          sales[StockCode] <> "amazonfee", 
+                          sales[StockCode] <> "bank charges", 
+                          sales[StockCode] <> "cruk", 
+                          sales[StockCode] <> "b", 
+                          sales[StockCode] <> "s", 
+                          LEFT(sales[StockCode], 4) <> "gift")
+
+UK net revenue:
+UK Net Revenue = CALCULATE([Net Product Revenue], sales[Country] = "United Kingdom")
+  
+UK share of net revenue:
+UK Share % = DIVIDE([UK Net Revenue], [All Countries Net])
+
+Country share of net revenue:
+Country Share % = DIVIDE([Net Product Revenue], [All Countries Net])
+
+  All Countries Net = CALCULATE([Net Product Revenue], REMOVEFILTERS(sales[Country]))
+
