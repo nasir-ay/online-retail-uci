@@ -1,6 +1,6 @@
 # Project 2: UK Share of Net Revenue and Top Export Markets
 
-![Dashboard](images/dashboard_project2.png)
+![Dashboard](uci-dashboard.png)
 
 **Data:** Online Retail II, Kaggle (https://www.kaggle.com/datasets/jillwang87/online-retail-ii), licence CC BY 4.0. Raw data not included in this repo.
 
